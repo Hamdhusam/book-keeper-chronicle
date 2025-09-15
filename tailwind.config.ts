@@ -57,6 +57,22 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        book: {
+          spine: "hsl(var(--book-spine))",
+          page: "hsl(var(--book-page))",
+        },
+        library: {
+          warm: "hsl(var(--library-warm))",
+          deep: "hsl(var(--library-deep))",
+        },
+      },
+      backgroundImage: {
+        "gradient-hero": "var(--gradient-hero)",
+        "gradient-card": "var(--gradient-card)",
+      },
+      boxShadow: {
+        book: "var(--shadow-book)",
+        card: "var(--shadow-card)",
       },
       borderRadius: {
         lg: "var(--radius)",
