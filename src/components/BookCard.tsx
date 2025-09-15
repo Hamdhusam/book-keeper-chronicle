@@ -16,8 +16,18 @@ export const BookCard = ({ book, onBorrow, showBorrowButton = true }: BookCardPr
   return (
     <Card className="h-full flex flex-col bg-gradient-card shadow-card hover:shadow-book transition-all duration-200 hover:-translate-y-1">
       <CardHeader className="pb-3">
-        <div className="aspect-[3/4] bg-book-page rounded-lg mb-3 flex items-center justify-center border-l-4 border-book-spine">
-          <BookOpen className="w-12 h-12 text-book-spine" />
+        <div className="aspect-[3/4] bg-book-page rounded-lg mb-3 overflow-hidden border-l-4 border-book-spine">
+          {book.coverImage ? (
+            <img 
+              src={book.coverImage} 
+              alt={`Cover of ${book.title}`}
+              className="w-full h-full object-cover"
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center">
+              <BookOpen className="w-12 h-12 text-book-spine" />
+            </div>
+          )}
         </div>
         <div>
           <h3 className="font-semibold text-lg text-foreground line-clamp-2 mb-1">{book.title}</h3>
